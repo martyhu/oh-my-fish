@@ -47,7 +47,7 @@ alias upgrade='sudo apt-get upgrade'
 alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
 alias b='babel-node'
-# alias saltstack='ssh -t master \''sudo salt \''*\'' state.apply\'''
-# alias saltstaging='ssh -t master \''sudo salt \''*staging*\'' state.apply\'''
-# alias vagrantprod='ENV=ec2 vagrant provision; and saltstack'
-# alias vagrantstaging='ENV=ec2 vagrant provision; and saltstaging'
+alias saltstack="ssh -t master 'sudo salt * state.apply'"
+alias saltstaging="ssh -t master 'sudo salt *staging* state.apply'"
+alias vagrantprod='env ENV=ec2 vagrant provision; and saltstack'
+alias vagrantstaging='env ENV=ec2 vagrant provision; and saltstaging'
