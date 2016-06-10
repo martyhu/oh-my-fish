@@ -1,3 +1,6 @@
+# set fish colors
+set -g TERM xterm-256color
+
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
